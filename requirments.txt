@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+torch
+numpy
+pillow
+opencv-python
+realesrgan
+basicsr
+easyocr
