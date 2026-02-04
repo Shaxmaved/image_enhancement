@@ -24,11 +24,15 @@ async def process(
     low_text: float = Query(0.2),
     link_threshold: float = Query(0.2),
 ):
-    # 1️⃣ Load RAW image
-    raw_image = Image.open(file.file).convert("RGB")
+    
+    contents = await file.read()
 
     # Document classification (RAW IMAGE ✅)
-    document = classify_document(raw_image)
+    document = classify_document(contents)
+
+    # 1️⃣ Load RAW image
+    raw_image = Image.open(BytesIO(contents))
+    
 
     # 2️⃣ Enhance image (FOR OCR ONLY)
     enhanced_image = enhance_image(raw_image, outscale=2)
