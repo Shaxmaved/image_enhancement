@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 
 # ---------------- CONFIG ----------------
-MODEL_PATH = r"C:\Users\VED SHARMA\Python\Python 3.13\basic\image enhancer\venv\fastapi\DocClasfnModel.pt"
+MODEL_PATH = r"C:\Users\VED SHARMA\Python\Python 3.13\basic\image enhancer\Repo\DocClasfnModel.pt"
 IMAGE_PATH = r"C:\Users\VED SHARMA\Python\Python 3.13\basic\image enhancer\venv\fastapi\outputs\pan6.png"
 # ---------------------------------------
 
@@ -24,5 +24,5 @@ print("Document Type:", class_name)
 print("Confidence:", round(confidence, 4))
 
 print("Predicted index:", class_id)
-print("Predicted label:", CLASS_NAMES[class_id])
+print("Predicted label:", class_name)
 print("Confidence:", confidence)
